@@ -7,5 +7,10 @@ addEventListener('fetch', event => {
  * @param {Request} request
  */
 async function handleRequest(request) {
-  return new Response('Hello worker!', { status: 200 })
+  return getIP(request)
+}
+
+function getIP(request) {
+  const ip = request.headers.get('cf-connecting-ip') + '\n'
+  return new Response(ip)
 }

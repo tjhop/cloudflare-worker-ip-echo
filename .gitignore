@@ -2,9 +2,11 @@
 **/*.rs.bk
 Cargo.lock
 bin/
+dist/
 pkg/
 wasm-pack.log
 worker/
 node_modules/
 .cargo-ok
 wrangler.toml
+package-lock.json
